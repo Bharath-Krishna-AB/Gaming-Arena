@@ -171,7 +171,7 @@ body {
   
   
   .RPS-hands {
-    background-image: url("./Assets/triangle.png");
+    background-image: url("./Assets/rockpaperscissors/triangle.png");
     background-position: center;
     background-repeat: no-repeat;
     visibility: visible;
