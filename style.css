@@ -3,7 +3,7 @@
 
 /* Import Google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-/* 
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -79,7 +79,7 @@ body {
     padding: 15px 0;
     font-size: 1rem;
   }
-} */
+} 
 
 
 /* ROCK PAPER SCISSORS */
@@ -479,7 +479,7 @@ body {
         .pipe_sprite{
             width: 14vw;
         }
-    } */
+    }  */
 
 
 
@@ -488,7 +488,7 @@ body {
     /* TIC TAC TOE  */
 
 
-
+/* 
     * {
       padding: 0;
       margin: 0;
@@ -525,6 +525,7 @@ body {
       color: #d161ff;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
+
     #TTT-restart {
       font-size: 1.3em;
       padding: 1em;
@@ -535,7 +536,15 @@ body {
       position: relative;
       margin: 1.5em auto 0 auto;
       display: block;
+      border: solid 2px #0a0027;
     }
+
+    #TTT-restart:hover{
+      color: #0a0027;
+      /* background: #02ff63; */
+      /* border-color: #0a0027;
+    }
+
     .TTT-popup {
       background: linear-gradient(135deg, #8052ec, #d161ff);
       height: 100%;
@@ -564,4 +573,4 @@ body {
     }
     .TTT-popup.TTT-hide {
       display: none;
-    }
+    } */ 
