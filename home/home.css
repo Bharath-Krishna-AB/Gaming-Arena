@@ -9,6 +9,10 @@ body{
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .main-width{
   width: 1400px;
   max-width: 95%;
@@ -98,19 +102,19 @@ nav ul li.btn a{
   background: transparent;
   color: #000;
   border: 1px solid #3d3728;
-  padding: 9px 20px;
+  padding: 10px 20px;
   border-radius: 30px;
   line-height: 1.4;
   font-size: 14px;
   font-weight: 500;
   margin: 150px;
+  transition: ease-in-out .7s;
 }
 
 nav ul li.btn:hover a{
   border: 1px solid #000;
   color: #fff;
   background: #000;
-  transition: .4s;
 }
 
 nav ul span{
@@ -136,6 +140,14 @@ nav ul span{
   flex-direction: column;
   align-items: center;
 }
+
+.content .main-text span{
+  display: inline-block;
+  position: relative;
+  transform: translateY(100vh);
+  animation: fall 1s forwards;
+}
+
 
 .content .main-text h1{
   font-size: 80px;
@@ -173,7 +185,7 @@ nav ul span{
   font-size: 14px;
   font-weight: 500;
   transform: scale(1.2);
-  transition: 0.4s;
+  transition: ease-in-out .7s;
 }
 
 .content .main-text a:hover{

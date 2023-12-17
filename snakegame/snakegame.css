@@ -16,6 +16,20 @@ body {
   min-height: 100vh;
   background: #E3F2FD;
 }
+
+.back-btn{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  background: none;
+  font-size: 2em;
+  color: red;
+  top: 5px;
+  left: 10px;
+}
+
 .snake-wrapper {
   width: 65vmin;
   height: 70vmin;

@@ -18,6 +18,19 @@
     background-repeat: no-repeat;
   }
   
+
+  .back-btn{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background: none;
+    font-size: 3em;
+    color: red;
+    top: 5px;
+    left: 10px;
+}
   
   .RPS-parent-div {
     display: flex;
