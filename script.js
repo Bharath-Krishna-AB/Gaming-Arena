@@ -2,6 +2,9 @@ const playBoard = document.querySelector(".snake-play-board");
 const scoreElement = document.querySelector(".snake-score");
 const highScoreElement = document.querySelector(".snake-high-score");
 const controls = document.querySelectorAll(".controls i");
+let snake_move = new Audio('SoundEffect/move.mp3')
+let snake_gameOver = new Audio('SoundEffect/gameover.mp3')
+let snake_food = new Audio('SoundEffect/food.mp3')
 
 let gameOver = false;
 let foodX, foodY;
@@ -26,13 +29,14 @@ const updateFoodPosition = () => {
 }
 
 const handleGameOver = () => {
-    // Clearing the timer and reloading the page on game over
+    // Clearing the timer and reloading the page on game 
     clearInterval(setIntervalId);
     alert("Game Over! Press OK to replay...");
     location.reload();
 }
 
 const changeDirection = e => {
+    snake_move.play()
     // Changing velocity value based on key press
     if(e.key === "ArrowUp" && velocityY != 1) {
         velocityX = 0;
@@ -58,6 +62,7 @@ const initGame = () => {
 
     // Checking if the snake hit the food
     if(snakeX === foodX && snakeY === foodY) {
+        snake_food.play()
         updateFoodPosition();
         snakeBody.push([foodY, foodX]); // Pushing food position to snake body array
         score++; // increment score by 1
@@ -79,6 +84,7 @@ const initGame = () => {
 
     // Checking if the snake's head is out of wall, if so setting gameOver to true
     if(snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
+        snake_gameOver.play()
         return gameOver = true;
     }
 
@@ -91,6 +97,7 @@ const initGame = () => {
         }
         // Checking if the snake head hit the body, if so set gameOver to true
         if (i !== 0 && snakeBody[0][1] === snakeBody[i][1] && snakeBody[0][0] === snakeBody[i][0]) {
+            snake_gameOver.play()
             gameOver = true;
         }
     }
