@@ -2,9 +2,9 @@ const playBoard = document.querySelector(".snake-play-board");
 const scoreElement = document.querySelector(".snake-score");
 const highScoreElement = document.querySelector(".snake-high-score");
 const controls = document.querySelectorAll(".controls i");
-let snake_move = new Audio('SoundEffect/move.mp3')
-let snake_gameOver = new Audio('SoundEffect/gameover.mp3')
-let snake_food = new Audio('SoundEffect/food.mp3')
+let snake_move = new Audio('/SoundEffect/move.mp3')
+let snake_gameOver = new Audio('/SoundEffect/gameover.mp3')
+let snake_food = new Audio('/SoundEffect/food.mp3')
 
 let gameOver = false;
 let foodX, foodY;

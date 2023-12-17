@@ -88,7 +88,7 @@
   
   
   .RPS-hands {
-    background-image: url("./Assets/rockpaperscissors/triangle.png");
+    background-image: url("/Assets/rockpaperscissors/triangle.png");
     background-position: center;
     background-repeat: no-repeat;
     visibility: visible;
@@ -108,19 +108,19 @@
     display: block;
   }
   
-  .RPS-hands .paper {
+  .RPS-hands .RPS-paper {
     margin-right: 1.5rem;
   }
   
-  .RPS-hands .scissors {
+  .RPS-hands .RPS-scissors {
     margin-right: 1.5rem;
   }
   
-  .RPS-hands .hand {
+  .RPS-hands .RPS-hand {
     cursor: pointer;
     transition: all 0.25s;
   }
-  .RPS-hands .hand:hover {
+  .RPS-hands .RPS-hand:hover {
     transform: translate3d(0rem, -.8rem, 0rem);
   }
   
@@ -210,11 +210,11 @@
         height: 47.0rem;
       }
   
-      .RPS-hands .paper{
+      .RPS-hands .RPS-paper{
         margin-right: 3rem;
       }
   
-      .RPS-hands .scissors{
+      .RPS-hands .RPS-scissors{
         margin-left: 3rem;
       }
   
@@ -230,15 +230,15 @@
         height: 57rem;
       }
   
-      .RPS-hands .paper{
+      .RPS-hands .RPS-paper{
         margin-right: 10rem;
       }
   
-      .RPS-hands .scissors{
+      .RPS-hands .RPS-scissors{
         margin-left: 10rem;
       }
   
-      .RPS-hands .rock{
+      .RPS-hands .RPS-rock{
         margin-top: 10rem;
       }
     }
@@ -253,15 +253,15 @@
         height: 65rem;
       }
   
-      .RPS-hands .paper{
+      .RPS-hands .RPS-paper{
         margin-right: 12rem;
       }
   
-      .RPS-hands .scissors{
+      .RPS-hands .RPS-scissors{
         margin-left: 12rem;
       }
   
-      .RPS-hands .rock{
+      .RPS-hands .RPS-rock{
         margin-top: 10rem;
       }
   
@@ -286,15 +286,15 @@
         width: 25rem;
         height: 25rem;
       }
-      .RPS-hands .paper{
+      .RPS-hands .RPS-paper{
         margin-right: 15rem;
       }
   
-      .RPS-hands .scissors{
+      .RPS-hands .RPS-scissors{
         margin-left: 15rem;
       }
   
-      .RPS-hands .rock{
+      .RPS-hands .RPS-rock{
         margin-top: 15rem;
       }
     } 

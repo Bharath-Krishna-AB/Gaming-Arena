@@ -1,4 +1,4 @@
-var threeHands = {paper: "./Assets/rockpaperscissors/Paper.png",scissors: "./Assets/rockpaperscissors/Scissors.png",rock: "./Assets/rockpaperscissors/Rock.png"}
+var threeHands = {paper: "/Assets/rockpaperscissors/Paper.png",scissors: "/Assets/rockpaperscissors/Scissors.png",rock: "/Assets/rockpaperscissors/Rock.png"}
 var RPS_score= 0
 
 console.log(threeHands);
@@ -66,26 +66,26 @@ if(userInp == cpRandom){
     decision.innerText = "ITS A TIE!"
 }else if(userInp=='paper' && cpRandom=='rock') {
     decision.innerText = "YOU WIN!"
-    score++
+    RPS_score++
 }else if(userInp=='rock' && cpRandom=='paper') {
     decision.innerText = "COMPUTER WIN!"
 }else if(userInp=='scissors' && cpRandom=='paper') {
     decision.innerText = "YOU WIN!"
-    score++
+    RPS_score++
 }else if(userInp=='paper' && cpRandom=='scissors') {
     decision.innerText = "COMPUTER WIN!"
 }else if(userInp=='scissors' && cpRandom=='rock') {
     decision.innerText = "COMPUTER WIN!"
 }else if(userInp=='rock' && cpRandom=='scissors') {
     decision.innerText = "YOU WIN!"
-    score++
+    RPS_score++
 }
 
 //updating score
 
 var updatingScore=document.querySelector('.RPS-score h1')
 
-updatingScore.innerText=`${score}`
+updatingScore.innerText=`${RPS_score}`
 
 
 }
