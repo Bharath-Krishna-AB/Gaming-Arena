@@ -50,7 +50,6 @@ body{
 }
 
 .Wrapper header .logo h2 a span spc{
-  /* color: rgb(184, 229, 2); */
   color: rgb(184, 229, 2);
 }
 
@@ -88,7 +87,7 @@ nav ul li a span{
   display: inline-block;
   position: relative;
   transform: translateY(-100vh);
-  animation: fall 1s forwards;
+  animation: fall 1s ease-in-out forwards;
 }
 
 
@@ -145,7 +144,7 @@ nav ul span{
   display: inline-block;
   position: relative;
   transform: translateY(100vh);
-  animation: fall 1s forwards;
+  animation: fall 1s ease-in-out forwards;
 }
 
 
