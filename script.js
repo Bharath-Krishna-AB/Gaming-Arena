@@ -10,6 +10,10 @@ let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
 let score = 0;
+let FoodColorArr = ["#FF003D","blue","yellow","green","orange"]
+
+var FoodColor = Math.floor(Math.random() * FoodColorArr.length)
+
 
 // Getting high score from the local storage
 let highScore = localStorage.getItem("high-score") || 0;
@@ -29,7 +33,6 @@ const handleGameOver = () => {
 }
 
 const changeDirection = e => {
-    console.log(e);
     // Changing velocity value based on key press
     if(e.key === "ArrowUp" && velocityY != 1) {
         velocityX = 0;
@@ -49,10 +52,9 @@ const changeDirection = e => {
 // Calling changeDirection on each key click and passing key dataset value as an object
 controls.forEach(button => button.addEventListener("click", () => changeDirection({ key: button.dataset.key })));
 
-
 const initGame = () => {
     if(gameOver) return handleGameOver();
-    let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
+    let html = `<div class="food" style="grid-area: ${foodY} / ${foodX} ; background: ${FoodColorArr[FoodColor]}"></div>`;
 
     // Checking if the snake hit the food
     if(snakeX === foodX && snakeY === foodY) {
@@ -63,6 +65,7 @@ const initGame = () => {
         localStorage.setItem("high-score", highScore);
         scoreElement.innerText = `Score: ${score}`;
         highScoreElement.innerText = `High Score: ${highScore}`;
+        FoodColor = Math.floor(Math.random() * FoodColorArr.length)
     }
     // Updating the snake's head position based on the current velocity
     snakeX += velocityX;
@@ -81,7 +84,11 @@ const initGame = () => {
 
     for (let i = 0; i < snakeBody.length; i++) {
         // Adding a div for each part of the snake's body
+        if(i===0){
+        html += `<div class="firstHead" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
+        }else{
         html += `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
+        }
         // Checking if the snake head hit the body, if so set gameOver to true
         if (i !== 0 && snakeBody[0][1] === snakeBody[i][1] && snakeBody[0][0] === snakeBody[i][0]) {
             gameOver = true;

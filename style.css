@@ -3,7 +3,7 @@
 
 /* Import Google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-*{
+  *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,8 +28,9 @@ body {
   box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
 }
 .snake-game-details {
+  
   color: #B8C6DC;
-  font-weight: 500;
+  font-weight: 1000;
   font-size: 1.2rem;
   padding: 20px 27px;
   display: flex;
@@ -46,8 +47,14 @@ body {
   background: #FF003D;
 }
 .snake-play-board .head {
+  background: #96EFFF;
+  /* background: #fff; */
+}
+
+.snake-play-board .firstHead {
   background: #60CBFF;
 }
+
 
 .snake-controls {
   display: none;
@@ -79,12 +86,12 @@ body {
     padding: 15px 0;
     font-size: 1rem;
   }
-} 
+}   
 
 
 /* ROCK PAPER SCISSORS */
 
-/* * {
+ /* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -366,7 +373,7 @@ body {
         width: 66rem ;
         height: 55rem;
         /* background: red; */
-      /* }
+       /* }
   
       .RPS-hand img{
         width: 25rem;
@@ -383,9 +390,9 @@ body {
       .RPS-hands .rock{
         margin-top: 15rem;
       }
-    } */
+    }  */
 
- 
+  
 
 
     /* FLAPPY BIRD */
@@ -413,13 +420,19 @@ body {
         background-size: cover;
     }
     .flappy-bird {
-	height: 50px;
-	width: 60px;
+	      height: 50px;
+	      width: 60px;
         position: fixed;
         top: 40vh;
         left: 30vw;
         z-index: 100;
     }
+
+    .flappy-bird:active{
+      content: url(/Assets/Bird-2.png);
+    }
+
+
     .pipe_sprite {
         position: fixed;
         top: 40vh;
@@ -479,8 +492,8 @@ body {
         .pipe_sprite{
             width: 14vw;
         }
-    }  */
-
+    } 
+ */
 
 
 
