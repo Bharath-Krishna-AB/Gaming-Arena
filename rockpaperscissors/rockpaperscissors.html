@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rockpaperscissors.css">
+</head>
+<body>
+     <div class="RPS-parent-div">
+        <div class="RPS-scoreboard"> 
+            <div class="RPS-title">
+                <img src='./Assets/rockpaperscissors/title.png' />
+            </div>
+            <div class="RPS-score-container">
+            <div class="RPS-score">
+                <p>SCORE</p>
+                <h1> 0 </h1>
+            </div>
+            </div>
+        </div>
+
+    <div class="RPS-main">
+        <section class="RPS-hands">
+            <div class="RPS-hand RPS-paper">
+              <img src="./Assets/rockpaperscissors/Paper.png" onclick="pickUserHand('paper')"/>
+            </div>
+            <div class="RPS-hand RPS-scissors">
+              <img src="./Assets/rockpaperscissors/Scissors.png" onclick="pickUserHand('scissors')"/>
+            </div>
+            <div class="RPS-hand RPS-rock">
+              <img src="./Assets/rockpaperscissors/Rock.png" onclick="pickUserHand('rock')"/>                        
+            </div>
+        </section>
+
+        <div class="RPS-contest">       
+            <div class="RPS-userhand">
+                <h1>YOU PICKED</h1>
+                <div class="RPS-handImageContainer">
+                  <img id="userPickImage" src="">
+                </div>
+            </div>
+            <div class="RPS-referee"> 
+                <div class="RPS-decision"><h1>  </h1></div>
+                <div class="RPS-newGame" onclick="restartGame()">PLAY AGAIN</div>
+            </div>
+            <div class="RPS-computerhand">
+                <h1>COMPUTER PICKED</h1>
+                <div class="RPS-handImageContainer">
+                  <img id="computerPickImage" src='' /> 
+                </div>   
+            </div>       
+          </div> 
+        </div>
+</div>
+<script src="rockpaperscissors.js"></script>
+</body>
+</html>
