@@ -15,9 +15,7 @@ body{
   margin: 0 auto;
 }
 
-.hero{
-
-
+.Wrapper{
   height: 100vh;
   width: 100vw;
   background: url('/Assets/HomeBackground.jpg') no-repeat center center fixed;
@@ -26,18 +24,41 @@ body{
   -o-background-size: cover;
   background-size: cover;
 
-  
+
 }
 
-.hero header .logo h2 a{
-  display: block;
+.Wrapper header .logo h2 a{
   font-size: 32px;
   font-weight: 600;
   text-decoration: none;
   color: #000;
 }
 
-.hero header{
+.Wrapper header .logo h2 a span{
+  display: inline-block;
+  position: relative;
+  transform: translateY(-100vh);
+  animation: fall 1s forwards;
+}
+
+.Wrapper header .logo h2 a span::selection{
+  
+}
+
+.Wrapper header .logo h2 a span spc{
+  /* color: rgb(184, 229, 2); */
+  color: rgb(184, 229, 2);
+}
+
+
+@keyframes fall{
+  100%{
+    transform: translateY(0);
+  }
+}
+
+
+.Wrapper header{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,6 +79,15 @@ nav ul li a{
   border-bottom: 2px solid transparent;
   transition: .4s;
 }
+
+nav ul li a span{
+  display: inline-block;
+  position: relative;
+  transform: translateY(-100vh);
+  animation: fall 1s forwards;
+}
+
+
 
 nav ul li:not(:last-child) a:hover,
 nav ul li:not(:last-child) a:focus{
@@ -83,14 +113,28 @@ nav ul li.btn:hover a{
   transition: .4s;
 }
 
+nav ul span{
+  display: inline-block;
+  position: relative;
+  transform: translateY(-100vh);
+  animation: fall 1s forwards;
+}
+
 .content{
   padding-top: 140px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content .main-text{
   position: relative;
   z-index: 2;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content .main-text h1{
@@ -115,24 +159,25 @@ nav ul li.btn:hover a{
   line-height: 1.8;
   font-size: 15px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .content .main-text a{
   display: inline-block;
   text-decoration: none;
-  color: black;
-  background: white;
-  border: 1px solid white;
+  color: white;
+  background: transparent;
+  border: 1px solid #f5dca8;
   padding: 9px 25px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 500;
+  transform: scale(1.2);
+  transition: 0.4s;
 }
 
 .content .main-text a:hover{
-  transform: scale(1.2);
-  border: 1px solid #f5dca8;
-  color: white;
-  background: transparent;
-  transition: .4s;
+  color: #000;
+  background: #fff;
+  border: solid 1px #000;
 }
