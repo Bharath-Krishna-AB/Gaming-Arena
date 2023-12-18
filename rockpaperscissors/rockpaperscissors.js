@@ -1,3 +1,6 @@
+
+
+
 var threeHands = {paper: "/Assets/rockpaperscissors/Paper.png",scissors: "/Assets/rockpaperscissors/Scissors.png",rock: "/Assets/rockpaperscissors/Rock.png"}
 var RPS_score= 0
 

@@ -1,3 +1,8 @@
+
+
+
+
+
 let move_speed = 3, grativy = 0.5;
 let bird = document.querySelector('.flappy-bird');
 let img = document.getElementById('bird-1');

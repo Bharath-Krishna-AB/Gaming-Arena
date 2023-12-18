@@ -20,7 +20,7 @@
         border-radius: 30px;
         background: none;
         font-size: 2em;
-        color: red;
+        color: #00aaff;
         top: 5px;
         left: 10px;
     }
@@ -63,9 +63,11 @@
   }
 
   #TTT-restart:hover{
-    color: #0a0027;
+    color: #fff;
     /* background: #02ff63; */
+    background: transparent;
     border-color: #0a0027;
+    transition: ease-in-out 0.7s;
   }
 
   .TTT-popup {
@@ -84,11 +86,21 @@
   #TTT-new-game {
     font-size: 0.6em;
     padding: 0.5em 1em;
+    border: solid 2px #0a0027;
     background-color: #0a0027;
     color: #ffffff;
     border-radius: 0.2em;
-    border: none;
   }
+
+  #TTT-new-game:hover{
+    color: #fff;
+    /* background: #02ff63; */
+    background: transparent;
+    border-color: #0a0027;
+    transition: ease-in-out 0.7s;
+  }
+
+
   #TTT-message {
     color: #ffffff;
     text-align: center;

@@ -13,6 +13,7 @@ body{
   display: none;
 }
 
+
 .main-width{
   width: 1400px;
   max-width: 95%;
@@ -50,7 +51,8 @@ body{
 }
 
 .Wrapper header .logo h2 a span spc{
-  color: rgb(184, 229, 2);
+  /* color: rgb(184, 229, 2); */
+  color: rgb(23, 170, 249);
 }
 
 
