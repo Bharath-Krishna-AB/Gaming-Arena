@@ -165,6 +165,10 @@ nav ul span{
   color: white;
 }
 
+.content .main-text h3 spc{
+  color: rgb(23, 170, 249);
+}
+
 .content .main-text p{
   max-width: 100%;
   width: 480px;
