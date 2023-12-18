@@ -13,6 +13,10 @@ body{
   display: none;
 }
 
+::selection {
+  background: none;
+ }
+
 
 .main-width{
   width: 1400px;

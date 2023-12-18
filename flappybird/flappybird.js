@@ -1,4 +1,54 @@
+function SelectCharacter (num){
 
+var firstImg
+var SecondImg
+
+var CharacterSection = document.querySelector('.Wrapper')
+var PlayArea = document.querySelector('.content-container')
+
+var  BirdArrPosition = num
+
+var BirdArr = [
+    {
+        bird1: '/Assets/1skin.png',
+        bird2: '/Assets/1skin-2.png'
+    },
+    {
+        bird1: '/Assets/2skin.png',
+        bird2: '/Assets/2skin-2.png'
+    },
+    {
+        bird1: '/Assets/3skin.png',
+        bird2: '/Assets/3skin-2.png'
+    },
+    {
+        bird1: '/Assets/4skin.png',
+        bird2: '/Assets/4skin-2.png'
+    },
+    {
+        bird1: '/Assets/5skin.png',
+        bird2: '/Assets/5skin-2.png'
+    },
+    {
+        bird1: '/Assets/6skin.png',
+        bird2: '/Assets/6skin-2.png'
+    },
+    {
+        bird1: '/Assets/7skin.png',
+        bird2: '/Assets/7skin-2.png'
+    },
+    {
+        bird1: '/Assets/8skin.png',
+        bird2: '/Assets/8skin-2.png'
+    },
+]
+
+
+
+
+
+     CharacterSection.style.display = 'none'
+     PlayArea.classList.remove('content-container')
 
 
 
@@ -19,9 +69,15 @@ let score_val = document.querySelector('.flappy-score_val');
 let message = document.querySelector('.flappy-message');
 let score_title = document.querySelector('.flappy-score_title');
 
+console.log(BirdArr[BirdArrPosition]);
+    img.src = `${BirdArr[BirdArrPosition].bird1}`
+
+
+
 let game_state = 'Start';
 img.style.display = 'none';
 message.classList.add('flappy-messageStyle');
+
 
 document.addEventListener('keydown', (e) => {
     
@@ -80,14 +136,14 @@ function play(){
         bird_dy = bird_dy + grativy;
         document.addEventListener('keydown', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
-                img.src = '/Assets/Bird-2.png';
+                img.src = `${BirdArr[BirdArrPosition].bird2}`;
                 bird_dy = -7.6;
             }
         });
 
         document.addEventListener('keyup', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
-                img.src = '/Assets/Bird.png';
+                img.src = `${BirdArr[BirdArrPosition].bird1}`;
             }
         });
 
@@ -133,4 +189,7 @@ function play(){
         requestAnimationFrame(create_pipe);
     }
     requestAnimationFrame(create_pipe);
+}
+
+
 }

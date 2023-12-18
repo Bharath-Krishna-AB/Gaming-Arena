@@ -17,6 +17,10 @@ body {
   background: #E3F2FD;
 }
 
+::selection {
+  background: none;
+ }
+
 .back-btn{
   position: fixed;
   width: 40px;

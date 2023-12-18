@@ -17,6 +17,10 @@
     );
     background-repeat: no-repeat;
   }
+
+  ::selection {
+    background: none;
+   }
   
 
   .back-btn{
